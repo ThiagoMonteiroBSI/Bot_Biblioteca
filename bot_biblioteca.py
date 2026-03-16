@@ -2,11 +2,11 @@ import pandas as pd
 
 df = pd.read_excel('Biblioteca.xlsx', sheet_name='Página1', dtype=str)
 
-col_lidos = df.columns[0]
+col_lidos = df.columns[0] #contagem de colunas
 col_sipac = df.columns[1]
 col_falta = df.columns[2]
 
-def limpar_dado(valor):
+def limpar_dado(valor): #retira dados inconsistentes
     if pd.isna(valor) or str(valor).strip().lower() in ["", "nan"]:
         return ""
     texto = str(valor).strip().replace(" ", "") 
