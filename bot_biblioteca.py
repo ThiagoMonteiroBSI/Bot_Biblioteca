@@ -18,14 +18,14 @@ lidos_originais = [limpar_dado(x) for x in df[col_lidos].tolist()]
 sipac_sujos = [limpar_dado(x) for x in df[col_sipac].tolist()]
 sipac_originais = [x for x in sipac_sujos if x != ""]
 
-
+#Contagem de sipacs
 sipac_counts = {}
 for s in sipac_originais:
     sipac_counts[s] = sipac_counts.get(s, 0) + 1
 
 new_sipac = []
 
-
+#loop de processo
 for l in lidos_originais:
     if l == "":
         new_sipac.append("")
