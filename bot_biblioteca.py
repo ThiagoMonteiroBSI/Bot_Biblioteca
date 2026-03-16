@@ -13,7 +13,7 @@ def limpar_dado(valor): #retira dados inconsistentes
     if texto.endswith(".0"):
         texto = texto[:-2]
     return texto
-
+#Compara os lidos com os sipacs e os faltantes
 lidos_originais = [limpar_dado(x) for x in df[col_lidos].tolist()]
 sipac_sujos = [limpar_dado(x) for x in df[col_sipac].tolist()]
 sipac_originais = [x for x in sipac_sujos if x != ""]
